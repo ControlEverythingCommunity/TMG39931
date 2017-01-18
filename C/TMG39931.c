@@ -30,9 +30,9 @@ void main()
 	config[1] = 0xFF;
 	write(file, config, 2);
 	// Set Atime register(0x81)
-	// ATIME : 2.78ms, Max count = 1025 cycles(0xFF)
+	// ATIME : 712ms, Max count = 65535 cycles
 	config[0] = 0x81;
-	config[1] = 0xFF;
+	config[1] = 0x00;
 	write(file, config, 2);
 	// Select enable register(0x80)
 	// Power ON, ALS enable, Proximity enable, Wait enable(0x0F)
