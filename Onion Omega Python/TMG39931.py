@@ -16,8 +16,8 @@ i2c = onionI2C.OnionI2C()
 i2c.writeByte(0x39, 0x80, 0x0F)
 # TMG39931 address, 0x39(57)
 # Select ADC integration time register, 0x81(129)
-#		0xFF(255)	ATIME : 712ms, Max count = 65535 cycles
-i2c.writeByte(0x39, 0x81, 0xFF)
+#		0x00(00)	ATIME : 712ms, Max count = 65535 cycles
+i2c.writeByte(0x39, 0x81, 0x00)
 # TMG39931 address, 0x39(57)
 # Select Wait time register, 0x83(131)
 #		0xFF(255)	WTIME : 2.78ms
