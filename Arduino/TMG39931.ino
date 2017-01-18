@@ -29,8 +29,8 @@ void setup()
   Wire.beginTransmission(Addr);
   // Select ADC integration time register
   Wire.write(0x81);
-  // ATIME : 2.78ms, maximum count = 1025
-  Wire.write(0xFF);
+  // ATIME : 712ms, Max count = 65535 cycles
+  Wire.write(0x00);
   // Stop I2C transmission
   Wire.endTransmission();
 
@@ -61,7 +61,7 @@ void loop()
   // Start I2C Transmission
   Wire.beginTransmission(Addr);
   // Select data register
-  Wire.write(148);
+  Wire.write(0x94);
   // Stop I2C transmission
   Wire.endTransmission();
   
