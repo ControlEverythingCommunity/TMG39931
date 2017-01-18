@@ -22,8 +22,8 @@ public class TMG39931
 		// Wtime = 2.78 ms, 
 		device.write(0x83, (byte)0xFF);
 		// Set Atime register
-		// ATIME : 2.78ms, Max count = 1025 cycles
-		device.write(0x81, (byte)0xFF); 
+		// ATIME : 712ms, Max count = 65535 cycles
+		device.write(0x81, (byte)0x00); 
 		// Select enable register
 		// Power ON, ALS enable, Proximity enable, Wait enable
 		device.write(0x80, (byte)0x0F);
