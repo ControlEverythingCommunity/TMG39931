@@ -7,7 +7,6 @@
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
-import java.io.IOException;
 
 public class TMG39931
 {
@@ -38,7 +37,7 @@ public class TMG39931
 		int cData = (((data[1] & 0xFF) * 256) + (data[0] * 0xFF));
 		int red = (((data[3] & 0xFF) * 256) + (data[2] & 0xFF));
 		int green = (((data[5] & 0xFF) * 256) + (data[4] & 0xFF)); 
-		int blue = (((data[7] & 0xFF) * 256) + (data[6]) & 0xFF));
+		int blue = (((data[7] & 0xFF) * 256) + (data[6] & 0xFF));
 		int proximity = data[8] & 0xFF;
 		
 		// Output data to screen
